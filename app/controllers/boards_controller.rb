@@ -8,7 +8,6 @@ class BoardsController < ApplicationController
   end
 
   def create
-    byebug
     @board = current_user.boards.build(board_params)
 
     if @board.save
@@ -21,6 +20,8 @@ class BoardsController < ApplicationController
 
   def show
     @board = Board.find(params[:id])
+    @comment = Comment.new
+    @comments = @board.comments.includes(:user).order(created_at: :desc)
   end
 
   private
