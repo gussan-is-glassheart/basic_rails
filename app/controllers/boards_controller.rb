@@ -2,7 +2,7 @@ class BoardsController < ApplicationController
   before_action :set_board, only: [:edit, :update, :destroy]
 
   def index
-    @boards = Board.all.includes([:user, :bookmarks]).order(created: :desc)
+    @boards = Board.all.includes([:user, :bookmarks]).order(created: :desc).page(params[:page])
   end
 
   def new
@@ -43,7 +43,7 @@ class BoardsController < ApplicationController
   end
 
   def bookmarks
-    @bookmarks_boards = current_user.bookmark_boards.includes(:user).order(created_at: :desc)
+    @bookmarks_boards = current_user.bookmark_boards.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   private
