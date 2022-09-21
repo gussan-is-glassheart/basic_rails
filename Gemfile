@@ -41,6 +41,7 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'pry-byebug'
 gem 'rails-i18n'
+gem 'ransack'
 gem 'sorcery', '0.14.0'
 
 group :development, :test do

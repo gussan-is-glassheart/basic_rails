@@ -2,7 +2,9 @@ class BoardsController < ApplicationController
   before_action :set_board, only: [:edit, :update, :destroy]
 
   def index
-    @boards = Board.all.includes([:user, :bookmarks]).order(created: :desc).page(params[:page])
+    @q = Board.ransack(params[:q])
+    #@boards = Board.all.includes([:user, :bookmarks]).order(created: :desc).page(params[:page])
+    @boards = @q.result(distinct: true).includes([:user, :bookmarks]).order(created: :desc).page(params[:page])
   end
 
   def new
@@ -43,7 +45,9 @@ class BoardsController < ApplicationController
   end
 
   def bookmarks
-    @bookmarks_boards = current_user.bookmark_boards.includes(:user).order(created_at: :desc).page(params[:page])
+    #@bookmarks_boards = current_user.bookmark_boards.includes(:user).order(created_at: :desc).page(params[:page])
+    @q = current_user.bookmark_boards.ransack(params[:q])
+    @bookmarks_boards = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   private
