@@ -4,6 +4,8 @@ ja:
     register: '登録'
     logout: 'ログアウト'
     post: '投稿'
+    edit: '編集'
+    update: '更新する'
     search_placeholder: '検索ワード'
     message:
       require_login: 'ログインしてください'
@@ -49,3 +51,5 @@ ja:
   profiles:
     show:
       title: 'プロフィール'
+    edit:
+      title: 'プロフィール編集'
