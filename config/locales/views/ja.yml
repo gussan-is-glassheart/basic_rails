@@ -9,6 +9,7 @@ ja:
     search_placeholder: '検索ワード'
     password_resets: 'パスワードリセット'
     message:
+      require_admin: '管理者権限がありません'
       require_login: 'ログインしてください'
       created: "%{item}を作成しました"
       not_created: "%{item}を作成できませんでした"
@@ -65,3 +66,15 @@ ja:
       title: 'プロフィール'
     edit:
       title: 'プロフィール編集'
+  admin:
+    dashboards:
+      index:
+        title: 'ダッシュボード'
+    user_sessions:
+      new:
+        title: 'ログイン'
+      create:
+        success: 'ログインしました'
+        fail: 'ログインに失敗しました'
+      destroy:
+        success: 'ログアウトしました'
