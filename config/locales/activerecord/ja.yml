@@ -1,4 +1,9 @@
 ja:
+  enums:
+      user:
+        role:
+          general: '一般'
+          admin: '管理者'
   activerecord:
     models:
       user: 'ユーザー'
@@ -7,6 +12,7 @@ ja:
       bookmark: 'ブックマーク'
     attributes:
       user:
+        id: 'ID'
         email: 'メールアドレス'
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
@@ -14,9 +20,14 @@ ja:
         first_name: '名'
         full_name: '氏名'
         avatar: 'アバター'
+        role: '権限'
+        created_at: '作成日時'
       board:
+        id: 'ID'
         title: 'タイトル'
         body: '本文'
         board_image: 'サムネイル'
+        created_at: '作成日時'
+        author: '作成者'
       comment:
         body: 'コメント'

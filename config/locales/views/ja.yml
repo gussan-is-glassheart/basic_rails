@@ -5,8 +5,11 @@ ja:
     logout: 'ログアウト'
     post: '投稿'
     edit: '編集'
+    show: '詳細'
+    delete: '削除'
     update: '更新する'
-    search_placeholder: '検索ワード'
+    search_word: '検索ワード'
+    unspecified: '指定なし'
     password_resets: 'パスワードリセット'
     message:
       require_admin: '管理者権限がありません'
@@ -78,3 +81,17 @@ ja:
         fail: 'ログインに失敗しました'
       destroy:
         success: 'ログアウトしました'
+    users:
+      index:
+        title: 'ユーザー一覧'
+      show:
+        title: 'ユーザー詳細'
+      edit:
+        title: 'ユーザー編集'
+    boards:
+      index:
+        title: '掲示板一覧'
+      show:
+        title: '掲示板詳細'
+      edit:
+        title: '掲示板編集'
